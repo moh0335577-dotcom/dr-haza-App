@@ -45,15 +45,17 @@
 
 <style>
   :root{
-    --bg:#FAF9F6;
-    --bg-alt:#F0F6F8;
-    --navy:#0B3A57;
-    --blue:#1C6FA5;
-    --teal:#3FB6AC;
-    --ink:#23303A;
-    --muted:#5B6B76;
+    --bg:#FFFFFF;
+    --bg-alt:#EAF7F5; /* نهدي فاتح */
+    --navy:#62458C; /* يستخدم كـ footer / dark purple */
+    --blue:#8E6BBE; /* بنفسجي أساسي */
+    --teal:#B9DDD8; /* نهدي */
+    --pink:#E8A9C4; /* زهري */
+    --pink-light:#F8DCE8; /* وردي فاتح */
+    --ink:#40364A; /* نص أساسي */
+    --muted:#7D7182; /* نص ثانوي */
     --white:#FFFFFF;
-    --border:#E2E9EC;
+    --border:#F0E6F5; /* حدود خفيفة ذات لمسة بنفسجية/زهري */
     --shadow-sm: 0 2px 10px rgba(11,58,87,0.06);
     --shadow-md: 0 10px 30px rgba(11,58,87,0.10);
     --shadow-lg: 0 24px 60px rgba(11,58,87,0.14);
@@ -131,7 +133,7 @@
   }
   .btn svg{width:19px;height:19px;flex-shrink:0;transition:transform .35s var(--ease);}
   .btn-primary{
-    background:linear-gradient(135deg,var(--blue),var(--navy));
+    background:linear-gradient(135deg,var(--blue),var(--pink));
     color:#fff;box-shadow:var(--shadow-md);
   }
   .btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(11,58,87,0.24);}
@@ -221,8 +223,8 @@
     min-height:100svh;display:flex;align-items:center;
     padding:150px 0 90px;position:relative;overflow:hidden;
     background:
-      radial-gradient(circle at 85% 15%, rgba(63,182,172,.14), transparent 45%),
-      radial-gradient(circle at 10% 85%, rgba(28,111,165,.10), transparent 45%),
+      radial-gradient(circle at 85% 15%, rgba(185,109,190,.14), transparent 45%),
+      radial-gradient(circle at 10% 85%, rgba(142,107,190,.10), transparent 45%),
       var(--bg);
   }
   .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;}
@@ -245,7 +247,7 @@
   }
   .hero-arc{position:absolute;bottom:-6px;right:0;width:100%;height:22px;z-index:-1;}
   .hero-arc path{
-    stroke:var(--teal);stroke-width:6;fill:none;stroke-linecap:round;
+    stroke:var(--pink);stroke-width:6;fill:none;stroke-linecap:round;
     stroke-dasharray:340;stroke-dashoffset:340;
     animation:draw-arc 1.4s var(--ease) .6s forwards;
   }
@@ -266,7 +268,7 @@
   .hero-visual{position:relative;height:520px;display:flex;align-items:center;justify-content:center;}
   .hero-visual .glow{
     position:absolute;width:380px;height:380px;border-radius:50%;
-    background:radial-gradient(circle, rgba(63,182,172,.22), transparent 70%);
+    background:radial-gradient(circle, rgba(185,221,216,.22), transparent 70%);
     filter:blur(10px);
   }
   .float-el{
@@ -289,7 +291,7 @@
   }
   .hero-tooth-wrap::before{
     content:"";position:absolute;inset:14px;border-radius:50%;
-    border:1.5px dashed rgba(28,111,165,.28);
+    border:1.5px dashed rgba(98,69,140,.28);
   }
   .hero-tooth-wrap svg{width:150px;height:150px;}
 
@@ -539,13 +541,13 @@
   /* ================= CTA ================= */
   .cta{
     padding:110px 0;position:relative;overflow:hidden;
-    background:linear-gradient(135deg,var(--navy) 0%, var(--blue) 60%, #1a8a9c 130%);
+    background:linear-gradient(135deg,var(--blue) 0%, var(--pink) 60%);
     color:#fff;text-align:center;
   }
   .cta::before{
     content:"";position:absolute;inset:0;
     background:radial-gradient(circle at 20% 20%, rgba(255,255,255,.10), transparent 40%),
-               radial-gradient(circle at 85% 80%, rgba(63,182,172,.25), transparent 45%);
+               radial-gradient(circle at 85% 80%, rgba(185,221,216,.18), transparent 45%);
   }
   .cta-inner{position:relative;z-index:1;max-width:680px;margin:0 auto;}
   .cta h2{font-size:clamp(28px,4.4vw,44px);font-weight:800;line-height:1.3;}
@@ -780,8 +782,9 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="url(#toothGrad)" stroke-width="1.4">
             <defs>
               <linearGradient id="toothGrad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#1C6FA5"/>
-                <stop offset="100%" stop-color="#3FB6AC"/>
+                <stop offset="0%" stop-color="#8E6BBE"/><!-- بنفسجي -->
+                <stop offset="50%" stop-color="#E8A9C4"/><!-- زهري -->
+                <stop offset="100%" stop-color="#B9DDD8"/><!-- نهدي -->
               </linearGradient>
             </defs>
             <path d="M12 3c-2.2 0-3.6 1.1-4.6 1.1-1.2 0-2.4-.9-3.5-.6C2.3 3.9 1.5 5.7 2 8c.4 2 1.6 2.6 1.9 4.6.3 2.1-.6 3.4-.1 5.4.4 1.6 1.5 2.9 2.7 2.9 1.3 0 1.6-1.1 2.6-1.1.9 0 1.4 1.1 2.6 1.1 1.4 0 2.2-1.5 2.7-3 .6-1.9-.3-3.2 0-5.2.3-2 1.4-2.5 1.8-4.5.4-2.1-.2-3.9-1.7-4.5-1.1-.4-2.4.5-3.5.5C15.5 4.2 14.1 3 12 3z" fill="url(#toothGrad)" fill-opacity="0.12"/>
