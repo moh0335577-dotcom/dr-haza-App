@@ -414,25 +414,33 @@
       position:relative;
       bottom:auto;
       left:auto;
+      right:auto;
       transform:none;
       width:100%;
       max-width:360px;
-      margin-top:10px;
+      margin-top:12px;
       padding:12px 16px;
       border-radius:24px;
       background:rgba(255,255,255,.96);
       box-shadow:0 12px 24px rgba(11,58,87,.08);
+      display:flex;
+      justify-content:center;
+      align-items:center;
     }
-    .about-badge .badge-inner{gap:6px;align-items:flex-start;}
+    .about-badge .badge-inner{
+      gap:6px;
+      align-items:center;
+      width:100%;
+    }
     .about-badge .doctor-name{
       font-size:clamp(18px, 5.8vw, 24px);
       line-height:1.4;
       white-space:normal;
-      text-align:right;
+      text-align:center;
       width:100%;
       word-break:keep-all;
     }
-    .about-badge .badge-line{justify-content:flex-end;gap:8px;min-width:auto;}
+    .about-badge .badge-line{justify-content:center;gap:8px;min-width:auto;}
     .about-badge .badge-line svg{width:26px;height:26px;}
     .about-text h3{font-size:20px;}
   }
