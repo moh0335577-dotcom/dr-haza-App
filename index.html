@@ -138,9 +138,10 @@
   }
   .btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(11,58,87,0.24);}
   .btn-whatsapp{
-    background:#25D366;color:#fff;box-shadow:0 10px 26px rgba(37,211,102,.28);
+    background:linear-gradient(135deg,var(--pink),var(--pink-light));
+    color:#fff;box-shadow:0 10px 26px rgba(232,169,196,.28);
   }
-  .btn-whatsapp:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(37,211,102,.38);}
+  .btn-whatsapp:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(232,169,196,.38);}
   .btn-ghost{
     background:#fff;color:var(--navy);border:1.5px solid var(--border);
   }
@@ -656,8 +657,9 @@
   .fab:hover{transform:scale(1.08);}
   .fab svg{width:27px;height:27px;color:#fff;}
   .fab-whatsapp{background:#25D366;}
+  .fab-whatsapp{background:linear-gradient(135deg,var(--pink),var(--pink-light));}
   .fab-whatsapp::before{
-    content:"";position:absolute;inset:0;border-radius:50%;background:#25D366;
+    content:"";position:absolute;inset:0;border-radius:50%;background:linear-gradient(135deg, rgba(232,169,196,0.9), rgba(248,220,232,0.9));
     animation:pulse-ring 2.4s infinite;z-index:-1;
   }
   @keyframes pulse-ring{
